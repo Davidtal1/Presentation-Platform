@@ -34,6 +34,8 @@ This project provides a RESTful API for managing presentations and their slides.
       }
     ]
   }
+
+  
 - **Response**: Returns the presentation object if found; otherwise, a 404 error.
 
 ### Fetch a Presentation by Title
@@ -56,7 +58,9 @@ This project provides a RESTful API for managing presentations and their slides.
   "content": "Slide content"
   }
 
+
 - **Response**:Returns the updated presentation with the new slide.
+
 
 ### Alter a Slide
 
@@ -72,6 +76,7 @@ This project provides a RESTful API for managing presentations and their slides.
 
 
 - **Response**: Returns the updated presentation with the altered slide.
+
 
   ### Alter the Authors List
 
@@ -94,12 +99,14 @@ This project provides a RESTful API for managing presentations and their slides.
 
 - **Response**: Returns the updated presentation without the deleted slide.
 
+
 ### Delete a Presentation
 
 - **Endpoint**: "DELETE /api/presentations/:title"
 
 
 - **Response**: Returns the deleted presentation object.
+
 
 ### Get All Presentations 
 
