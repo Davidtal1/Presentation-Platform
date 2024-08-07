@@ -40,6 +40,14 @@ This project provides a RESTful API for managing presentations and their slides.
 
 - **Endpoint**: "GET /api/presentations/:title"
 
+
+- **Response**: Returns the presentation object if found; otherwise, a 404 error.
+
+
+### Add a Slide to a Presentation
+
+- **Endpoint**: "POST /api/presentations/:title/slides"
+
 - **Request Body**
   ```json
   {
@@ -48,6 +56,54 @@ This project provides a RESTful API for managing presentations and their slides.
   "content": "Slide content"
   }
 
-- **Response**: Returns the updated presentation with the new slide.
+- **Response**:Returns the updated presentation with the new slide.
 
+### Alter a Slide
+
+- **Endpoint**: "PUT /api/presentations/:title/slides/:order"
+
+- **Request Body**
+  ```json
+  {
+  "title": "Updated Slide Title",
+  "content": "Updated slide content",
+  "order": 1
+  }
+
+
+- **Response**: Returns the updated presentation with the altered slide.
+
+  ### Alter the Authors List
+
+- **Endpoint**: "PUT /api/presentations/:title/authors"
+
+- **Request Body**
+  ```json
+  {
+  "authors": ["New Author1", "New Author2"]
+  }
+
+
+- **Response**: Returns the updated presentation with the new authors list.
+
+
+### Delete a Slide
+
+- **Endpoint**: "DELETE /api/presentations/:title/slides/:order"
+
+
+- **Response**: Returns the updated presentation without the deleted slide.
+
+### Delete a Presentation
+
+- **Endpoint**: "DELETE /api/presentations/:title"
+
+
+- **Response**: Returns the deleted presentation object.
+
+### Get All Presentations 
+
+ - **Endpoint**: "GET /api/presentations"
+
+ - **Response**: Returns an array of all presentation objects.  
 
