@@ -1,7 +1,6 @@
 {
   "name": "presentation-platform",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -18,5 +17,6 @@
     "chai": "^5.1.1",
     "mocha": "^10.7.0",
     "supertest": "^7.0.0"
-  }
+  },
+  "description": ""
 }
