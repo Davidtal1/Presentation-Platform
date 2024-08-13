@@ -1,11 +1,18 @@
 const mongoose = require("mongoose");
-const Slide = require("./slide");
 
-const PresentationSchema = new mongoose.Schema({
-  title: { type: String, unique: true, required: true },
-  authors: { type: [String], required: true },
-  publishDate: { type: Date, required: true },
-  slides: [Slide.schema],
+const slideSchema = new mongoose.Schema({
+  title: String,
+  order: Number,
+  content: String,
 });
 
-module.exports = mongoose.model("Presentation", PresentationSchema);
+const presentationSchema = new mongoose.Schema({
+  title: { type: String, required: true },
+  authors: [String],
+  publishDate: Date,
+  slides: [slideSchema],
+});
+
+const Presentation = mongoose.model("Presentation", presentationSchema);
+
+module.exports = Presentation;
